@@ -1,42 +1,67 @@
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:900);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 body {
-    background-image: url("../images/background.jpeg");
+    background-image: url("../images/splash-background.jpeg");
     background-size: cover;
-    background-color: #cccccc;
-    padding-top:50px;
     font-family: 'Lato', sans-serif;
     background-position:fixed;
+    color:white;
 }
 
 h1, h3 {
   font-family: 'Playfair Display', serif;
   font-weight:900;
+  color:white;
 }
 
 a {
-  color:#b34700;
+  color:#A9CA0A;
   font-weight: 700;
 }
 
 a:hover, a:focus {
-  color:#803300;
+  color:#87A208;
+  text-decoration: none;
 }
 
 .container {
-  background-color: rgba(255,255,255, 0.95);
+  background-color: rgba(0, 0, 0, 0.32);
+  height:100vh;
 
 }
 
-.btn-orange {
-  background-color: #b34700;
+.btn-custom {
+  background-color: #A9CA0A;
   color:white;
   border:0;
   transition: background-color .3s;
 }
 
-.btn-orange:hover {
+.btn-custom:hover {
   color:white;
-  background-color: #803300;
-
+  background-color: #87A208;
 }
+
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+  width: 100%;
+}
+
+.navbar-default .navbar-brand {
+  color: white;
+  font-size:20px;
+}
+.navbar-default {
+  background-color: rgba(0, 0, 0, 0.62);
+  border: 0;
+  border-radius:0px;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #dbdbdb;
+  transition: color .3s;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+  color: white;
+   
+}
+
