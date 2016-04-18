@@ -1,0 +1,22 @@
+<div class="row">
+
+   <h1 class="text-center">Show us your Songs</h1>
+   <p class="text-center"><a href="/songs/new">Click here</a> to share a song</p>
+ 
+</div>
+<hr>
+<div class="row">
+  <% @songs.each do |song| %>
+    <div class="col-md-4">
+      <h3>
+        <%= song.title %><br>
+        <%= song.author %>
+        <a href="<%= song.url %>"><span class="glyphicon glyphicon-play"></span></a>
+      </h3>
+      <p>
+        <a href="/songs/<%= song.id %>"><%= song.created_at %></a>
+      </p>
+    </div>
+  <% end %>
+</div>
+<hr>

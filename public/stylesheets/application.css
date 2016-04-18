@@ -1,0 +1,40 @@
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:900);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+body {
+    background-image: url("../images/background.jpeg");
+    background-size: cover;
+    background-color: #cccccc;
+    padding-top:50px;
+    font-family: 'Lato', sans-serif;
+    background-position:fixed;
+}
+
+h1, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight:900;
+}
+
+a {
+  color:#b34700;
+  font-weight: 700;
+}
+
+a:hover  {
+  color:#803300;
+}
+
+.container {
+  background-color: rgba(255,255,255, 0.95);
+
+}
+
+.btn-orange {
+  background-color: #b34700;
+  color:white;
+  border:0;
+}
+
+.btn-orange:hover {
+  background-color: #803300;
+
+}
