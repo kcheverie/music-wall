@@ -19,7 +19,7 @@ a {
   font-weight: 700;
 }
 
-a:hover  {
+a:hover, a:focus {
   color:#803300;
 }
 
@@ -32,9 +32,11 @@ a:hover  {
   background-color: #b34700;
   color:white;
   border:0;
+  transition: background-color .3s;
 }
 
 .btn-orange:hover {
+  color:white;
   background-color: #803300;
 
 }

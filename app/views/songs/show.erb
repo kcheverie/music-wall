@@ -3,13 +3,17 @@
   <div class="col-md-4"></div>
 
     <div class="col-md-4">
-      <h3><a href="<%= @song.url %>"><%= @song.title %></a><br><%= @song.author %></h3>
-      <p>
-      </p>
+      <h3>
+        <%= @song.title %><br>
+        <%= @song.author %>
+        <a href="<%= @song.url %>"><span class="glyphicon glyphicon-play"></span></a>
+      </h3>
       <p>
         <a href="/songs/<%= @song.id %>"><%= @song.created_at %></a>
       </p>
     </div>
+
+
     <div class="col-md-4"></div>
 
 </div>
