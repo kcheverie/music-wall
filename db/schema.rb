@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20160419173044) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
-    t.integer  "upvotes"
+    t.integer  "upvotes",    default: 0
   end
 
   add_index "songs", ["user_id"], name: "index_songs_on_user_id"
