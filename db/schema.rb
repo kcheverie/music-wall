@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160418210544) do
+ActiveRecord::Schema.define(version: 20160419173044) do
 
   create_table "songs", force: :cascade do |t|
     t.string   "title"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20160418210544) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.integer  "upvotes"
   end
 
   add_index "songs", ["user_id"], name: "index_songs_on_user_id"
