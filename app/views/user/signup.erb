@@ -1,0 +1,62 @@
+  <div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <h1 class="text-center">Sign Up</h1>
+    <hr>
+
+
+
+
+    <form class="form-horizontal" action="/user/signup" method="post">
+
+      <% if @user.errors.any? %>
+        <div>
+         <p class="text-center"> <strong>Some issues with your sign-up, please fix them:</strong></p>
+          <ul>
+            <% @user.errors.full_messages.each do |user| %>
+              <li><%= user %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="form-group">
+        <label class="col-sm-4 control-label">* Username:</label>
+        <div class="col-sm-8">
+          <input type="text" name="username" class="form-control" value="<%= @user.username %>">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-4 control-label">* Email:</label>
+        <div class="col-sm-8">
+          <input type="text" name="email" class="form-control" value="<%= @user.email %>" >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-4 control-label">* Password</label>
+        <div class="col-sm-8">
+          <input type="password" name="password" class="form-control" value="<%= @user.password %>" >
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label class="col-sm-4 control-label">* Confirm Password</label>
+        <div class="col-sm-8">
+          <input type="password" name="password_confirm" class="form-control">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-4 col-sm-8">
+          <button type="submit" class="btn btn-custom">SUBMIT</button>
+        </div>
+      </div>
+    </form>
+    <hr>
+    <p class="text-center">Have an account already? <a href="login">Log in</a></p>
+  </div>
+  <div class="col-md-4"></div>
+</div>
+

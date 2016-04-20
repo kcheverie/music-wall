@@ -1,13 +1,4 @@
-<% if @song.errors.any? %>
-  <div>
-    <strong>Some issues with your song, please fix them:</strong>
-    <ul>
-      <% @song.errors.full_messages.each do |song| %>
-        <li><%= song %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
+
 
 
   <div class="row">
@@ -15,7 +6,20 @@
   <div class="col-md-4">
     <h1 class="text-center">Share a Song</h1>
     <hr>
+
     <form class="form-horizontal" action="/songs" method="post">
+
+    <% if @song.errors.any? %>
+      <div>
+       <p class="text-center"> <strong>Some issues with your song, please fix them:</strong></p>
+        <ul>
+          <% @song.errors.full_messages.each do |song| %>
+            <li><%= song %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    
       <div class="form-group">
         <label class="col-sm-4 control-label">* Song Title:</label>
         <div class="col-sm-8">

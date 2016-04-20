@@ -6,17 +6,28 @@
 </div>
 <hr>
 <div class="row">
+
   <% @songs.each do |song| %>
-    <div class="col-md-4">
-      <h3>
-        <%= song.title %><br>
-        <%= song.author %>
-        <a href="<%= song.url %>"><span class="glyphicon glyphicon-play"></span></a>
-      </h3>
-      <p>
-        <a href="/songs/<%= song.id %>"><%= song.created_at %></a>
-      </p>
+  <% @song = song %>
+    <div class="col-md-4 song-height">
+      <div class="row">
+      <div class="col-md-2">
+
+      </div>
+        <div class="col-md-10">
+          <h3>
+            <%= @song.title %><br>
+            <%= @song.author %>
+            <%= show_play_link %>      
+          </h3> 
+            <%= show_user_id %>     
+          <p>        
+            <a href="/songs/<%= @song.id %>"><%= @song.created_at %></a>
+          </p>
+
+        </div>
+
+      </div>
     </div>
   <% end %>
 </div>
-<hr>

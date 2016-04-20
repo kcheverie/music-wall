@@ -4,7 +4,7 @@ body {
     background-image: url("../images/splash-background.jpeg");
     background-size: cover;
     font-family: 'Lato', sans-serif;
-    background-position:fixed;
+    background-attachment: fixed;
     color:white;
 }
 
@@ -12,6 +12,10 @@ h1, h3 {
   font-family: 'Playfair Display', serif;
   font-weight:900;
   color:white;
+}
+
+h3 {
+  margin-top:0px;
 }
 
 a {
@@ -25,13 +29,19 @@ a:hover, a:focus {
 }
 
 .container {
-  background-color: rgba(0, 0, 0, 0.32);
-  height:100vh;
+  background-color: rgba(0, 0, 0, 0.5);
 
+
+}
+
+.form-horizontal {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding:20px 10px;
 }
 
 .btn-custom {
   background-color: #A9CA0A;
+  font-weight:700;
   color:white;
   border:0;
   transition: background-color .3s;
@@ -65,3 +75,31 @@ a:hover, a:focus {
    
 }
 
+.form-horizontal .control-label {
+  padding-top: 0px;
+}
+
+.btn-upvote {
+    background-color: transparent;
+    border: 0;
+    color: white;
+    font-size: 35px;
+    width:100%;
+    text-align:center;
+    padding:0px;
+}
+
+.btn-upvote:hover, .btn-upvote:focus  {
+  background-color:transparent;
+  border:0;
+  color:#ff8000;
+}
+
+.btn-upvote > .active {
+  color:#ff8000;
+}
+
+
+.song-height {
+  height:150px;
+}
